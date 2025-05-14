@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hvem er vi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="index-page">
+<div class="bg-image"></div>
+
+<header>
+  <nav class="navbar container">
+    <div class="logo">
+      <span class="brand">Lund's Hjemmeservice</span>
+    </div>
+
+    <button class="nav-toggle" aria-label="Åbn navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-btn">Hvem er vi</a></li>
+      <li><a href="prisliste.html" class="nav-btn">Prisliste</a></li>
+      <li><a href="eksempler.html" class="nav-btn">Pris eksempler</a></li>
+      <li><a href="kontakt.html" class="nav-btn">Kontakt</a></li>
+      <li><a href="afslutning.html" class="nav-btn">Afslutning</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container">
+    <img src="img/logo.png" alt="Logo" class="hero-logo">
+    <h1>Haveservice og Handymand til hele Sjælland</h1>
+    <p>Tømrermester Kasper Lund Nielsen | CVR: 45565262</p>
+  </section>
+
+  <section class="action-boxes">
+    <a href="eksempler.html" class="box"><h3>Tømrerarbejde</h3></a>
+    <a href="eksempler.html" class="box"><h3>Malearbejde inde og ude</h3></a>
+    <a href="eksempler.html" class="box"><h3>Belægningsarbejde</h3></a>
+    <a href="eksempler.html" class="box"><h3>Haveservice</h3></a>
+    <a href="eksempler.html" class="box"><h3>Bortkørsel af affald</h3></a>
+    <a href="eksempler.html" class="box"><h3>Div. opgaver for Handymand</h3></a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content container">
+    <div class="footer-left">
+      <h2>Kontakt os</h2>
+      <p>Telefon: <a href="tel:+4528328515">+45 28 32 85 15</a></p>
+      <p>Email: <a href="mailto:kasperln@msn.com">kasperln@msn.com</a></p>
+    </div>
+    <div class="footer-right">
+      <div class="about">
+        <h3>Om os</h3>
+        <p>Professionelt håndværk til tiden.</p>
+      </div>
+      <div class="details">
+        <p>CVR: 45565262</p>
+        <p>Adresse: Dragehøjvej 55.1, Næstved, Denmark</p>
+      </div>
+      <div class="legal">
+        <img src="img/logo.png" alt="Logo" class="footer-logo">
+        <p>&copy; 2025 Kasper Lund Nielsen</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle')
+    .addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
+    });
+</script>
+</body>
+</html>
