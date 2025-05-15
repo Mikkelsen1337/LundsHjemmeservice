@@ -22,10 +22,8 @@ body {
 /* 2) BACKGROUND IMAGE OVERLAY */
 .bg-image {
   position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 70px);
+  top: 70px; left: 0;
+  width: 100%; height: calc(100% - 70px);
   background: url('../img/background.png') no-repeat center center;
   background-size: cover;
   filter: blur(4px);
@@ -42,7 +40,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 10;
 }
-.navbar {
+.navbar.container {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -56,10 +54,9 @@ header {
   font-weight: 600;
   color: #2c3e50;
 }
-/* Skjul nav-links på mobil */
 .nav-links {
   list-style: none;
-  display: none;
+  display: none; /* mobile first */
 }
 .nav-btn {
   text-decoration: none;
@@ -99,8 +96,7 @@ main {
 .hero-logo {
   display: block;
   margin: 0 auto 1rem;
-  width: 95px;
-  height: 95px;
+  width: 95px; height: 95px;
   border-radius: 50%;
   box-shadow: 0 1px 15px rgba(5,5,5,0.8);
   outline: solid 1px rgba(5,5,5,0.6);
@@ -116,7 +112,7 @@ main {
   text-decoration: underline;
 }
 
-/* 6) ACTION-BOXES (MOBIL – ÉN KOLONNE) */
+/* 6) ACTION-BOXES */
 .action-boxes {
   max-width: 960px;
   margin: 1rem auto;
@@ -132,7 +128,7 @@ main {
   border: 1px solid rgba(255,255,255,0.6);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   font-weight: 600;
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
@@ -147,7 +143,7 @@ main {
   background: rgba(0,0,0,0.4);
 }
 
-/* 7) PRISLISTE (MOBIL – ÉN KOLONNE) */
+/* 7) PRISLISTE */
 .price-hero {
   max-width: 960px;
   margin: 1rem auto 0;
@@ -190,7 +186,7 @@ main {
 }
 .price-item p {
   font-size: 1rem;
-  font-weight: 400; /* lidt lettere tekst */
+  font-weight: 400;
 }
 .price-item:hover {
   transform: scale(1.05);
@@ -198,7 +194,7 @@ main {
   background: rgba(0,0,0,0.4);
 }
 
-/* 8) FOOTER (MOBIL) */
+/* 8) FOOTER */
 footer {
   background: #f4f4f4;
   padding: 1rem 0;
@@ -211,8 +207,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 1rem;
+  text-align: center;
 }
 .footer-left h2 {
   font-size: 1.5rem;
@@ -262,78 +258,41 @@ body.nav-open .nav-links .nav-btn {
 /* 10) TABLET & UP (>=768px) — TO KOLONNER + VIS NAV */
 @media (min-width: 768px) {
   .nav-links {
-    display: flex;
-    gap: 1rem;
-    position: static;
-    background: none;
-    flex-direction: row;
-    box-shadow: none;
-    padding: 0;
+    display: flex; gap: 1rem;
+    position: static; background: none;
+    flex-direction: row; box-shadow: none; padding: 0;
   }
-
-  .action-boxes {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .box {
-    flex: 1 1 calc(45% - 1rem);
-    margin: 0.5rem;
-  }
-
-  .price-list {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .price-item {
-    flex: 1 1 calc(45% - 1rem);
-    margin: 0.5rem;
-  }
-
+  .action-boxes { flex-direction: row; gap: 1rem; }
+  .box { flex: 1 1 calc(45% - 1rem); }
+  .price-list { flex-direction: row; gap: 1rem; }
+  .price-item { flex: 1 1 calc(45% - 1rem); }
   .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row; justify-content: space-between;
     text-align: left;
   }
 }
 
 /* 11) DESKTOP & UP (>=1024px) — TRE KOLONNER OG FINPUDSNING */
 @media (min-width: 1024px) {
-  /* Hero større */
-  .hero {
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-  }
+  .hero { padding: 2rem 0; margin-bottom: 2rem; }
   .hero h1 { font-size: 3rem; }
-  .hero p  { font-size: 1.25rem; }
+  .hero p   { font-size: 1.25rem; }
 
-  /* Bokse & prisliste i 3 kolonner, wrap og centreret */
   .action-boxes,
   .price-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
     max-width: 960px;
-    margin: 2rem auto;
-    padding: 0;
+    margin: 2rem auto; padding: 0; gap: 1rem;
   }
   .action-boxes .box,
   .price-list .price-item {
     flex: 1 1 calc(30% - 1rem);
-    margin: 0.5rem;
-  }
-  .action-boxes .box h3,
-  .price-list .price-item h3 {
-    font-size: 1.5rem;
-  }
-  .price-list .price-item p {
-    font-size: 1.1rem;
-    font-weight: 400;
+    max-width: calc(30% - 1rem);
   }
 
-  /* Footer margin på desktop */
   .footer-content {
-    max-width: 960px;
-    margin: 2rem auto;
+    max-width: 960px; margin: 2rem auto;
     padding: 0;
     flex-direction: row;
     justify-content: space-between;
@@ -341,25 +300,91 @@ body.nav-open .nav-links .nav-btn {
   }
 }
 
-/* ================================
-   Index-side: mindre & uden bold/underline på action-boxes
-   ================================ */
-@media (min-width: 1024px) {
-  body.index-page .action-boxes .box {
-    /* Gør bokse en smule mindre */
-    padding: 1rem;
-    max-width: calc(40% - 1rem);
+/* =====================================================
+   EKSEMPLER.HTML — Portfolio & Pris-eksempler
+   ===================================================== */
+.examples-page .portfolio {
+  max-width: 960px;
+  margin: 1rem auto 2rem;
+  padding: 0 1rem;
+}
+.examples-page .portfolio h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
 
-    /* Fjern fed skrift og understregning */
-    font-weight: 400 !important;
-    text-decoration: none !important;
+/* Mobile-first: én kolonne, centreret */
+.examples-page .gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.examples-page .gallery .card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.examples-page .gallery .card img {
+  width: 100%;
+  display: block;
+}
+.examples-page .gallery .card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.5rem;
+}
+.examples-page .gallery .card .description,
+.examples-page .gallery .card .price {
+  font-size: 1rem;
+  margin: 0 1rem 0.75rem;
+}
+.examples-page .gallery .card .price {
+  font-weight: 600;
+}
+.examples-page .gallery .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Tablet+ (>=768px): to kolonner, centreret */
+@media (min-width: 768px) {
+  .examples-page .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
-
-  body.index-page .action-boxes .box h3 {
-    /* Sikr at overskriften i boksen ikke er bold eller understreget */
-    font-weight: 400;
-    text-decoration: none;
+  .examples-page .gallery .card {
+    flex: 1 1 calc(45% - 1rem);
+    max-width: calc(45% - 1rem);
   }
 }
 
+/* Desktop+ (>=1024px): tre kolonner */
+@media (min-width: 1024px) {
+  .examples-page .gallery .card {
+    flex: 1 1 calc(30% - 1rem);
+    max-width: calc(30% - 1rem);
+  }
+}
 
+/* =====================================================
+   EKSEMPLER.HTML — Ensartet billede-størrelse på kort
+   ===================================================== */
+.examples-page .gallery .card img {
+  width: 100%;             /* Fylder kortets bredde */
+  aspect-ratio: 4 / 3;     /* Samme forhold for alle billeder */
+  object-fit: fill;       /* Beskær og centrer motivet */
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+}
