@@ -130,6 +130,7 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   color: #fff;
   text-align: center;
+  align-content: center;
   font-weight: 600;
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
@@ -388,3 +389,210 @@ body.nav-open .nav-links .nav-btn {
   object-fit: fill;       /* Beskær og centrer motivet */
   border-bottom: 1px solid rgba(255,255,255,0.6);
 }
+
+/* =====================================================
+   KONTAKT.HTML — Header-override og Kontaktformular
+   ===================================================== */
+
+/* 1) Navbar-container (samme som andre sider) */
+.navbar.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 2) Kontaktsektionen */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.contact-form h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+form.form {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form.form label {
+  font-weight: 600;
+  color: #fff;
+}
+form.form input,
+form.form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  color: #2c3e50;
+}
+form.form textarea {
+  resize: vertical;
+}
+.btn-submit {
+  align-self: center;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-submit:hover {
+  background: rgba(0,0,0,0.8);
+  transform: scale(1.02);
+}
+
+/* 3) Tablet+ justering */
+@media (min-width: 768px) {
+  .contact-form {
+    padding: 0 2rem;
+  }
+  form.form {
+    gap: 1.5rem;
+  }
+}
+
+
+/* =====================================================
+   AFSLUTNING.HTML — Tak‐sektion
+   ===================================================== */
+
+/* 1) Sørg for at navbar får container‐styling */
+header nav.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 2) Closing‐sektionen */
+.closing {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.closing h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+.closing p {
+  font-size: 1rem;
+  color: #fff;
+  /* lidt lettere vægt for brødtekst */
+  font-weight: 300;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* 3) Tablet+ lille spacing */
+@media (min-width: 768px) {
+  .closing {
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+  .closing h1 {
+    font-size: 2.5rem;
+  }
+  .closing p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Skjul gamle input/label-toggle på desktop/tablet */
+  header .nav-toggle,
+  header .nav-toggle-label {
+    display: none;
+  }
+  /* Vis altid nav-links på ≥768px */
+  header .nav-links {
+    display: flex !important;
+    gap: 1rem;
+  }
+}
+
+/* =====================================================
+   AFSLUTNING.HTML — Pift afslutnings‐siden op
+   ===================================================== */
+.closing-card {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.closing-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.closing-card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.closing-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+/* Call-to-Action knap */
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: rgba(255,255,255,0.9);
+  color: #2c3e50;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,1);
+  transform: scale(1.05);
+}
+
+/* Tablet+ justeringer */
+@media (min-width: 768px) {
+  .closing-card {
+    padding: 3rem 2rem;
+  }
+  .closing-icon {
+    font-size: 4rem;
+  }
+  .closing-card h1 {
+    font-size: 2.5rem;
+  }
+  .closing-card p {
+    font-size: 1.1rem;
+  }
+}
+

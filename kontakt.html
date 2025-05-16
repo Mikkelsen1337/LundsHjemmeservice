@@ -1,4 +1,3 @@
-<!-- File: kontakt.html -->
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -9,23 +8,28 @@
 </head>
 <body>
 <div class="bg-image"></div>
+
 <header>
-  <nav class="navbar">
+  <nav class="navbar container">
     <div class="logo">
-      <img src="img/logo.png" alt="Virksomhedslogo">
       <span class="brand">Håndværkerfirmaet</span>
     </div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">&#9660;</label>
+
+    <!-- Hamburger knap -->
+    <button class="nav-toggle" aria-label="Åbn navigation">
+      <span></span><span></span><span></span>
+    </button>
+
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-btn">Hvem er vi</a></li>
-      <li><a href="prisliste.html" class="nav-btn">Prisliste</a></li>
-      <li><a href="eksempler.html" class="nav-btn">Pris eksempler</a></li>
-      <li><a href="kontakt.html" class="nav-btn">Kontakt</a></li>
-      <li><a href="afslutning.html" class="nav-btn">Afslutning</a></li>
+      <li><a href="index.html"    class="nav-btn">Hvem er vi</a></li>
+      <li><a href="prisliste.html"class="nav-btn">Prisliste</a></li>
+      <li><a href="eksempler.html"class="nav-btn">Pris eksempler</a></li>
+      <li><a href="kontakt.html"  class="nav-btn">Kontakt</a></li>
+      <li><a href="afslutning.html"class="nav-btn">Afslutning</a></li>
     </ul>
   </nav>
 </header>
+
 <main>
   <section class="contact-form">
     <h1>Kontakt os</h1>
@@ -40,26 +44,36 @@
     </form>
   </section>
 </main>
+
 <footer>
-  <div class="footer-left">
-    <h2>Kontakt os her</h2>
-    <p>Telefon: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
-    <p>Email: <a href="mailto:info@haandvaerker.dk">info@haandvaerker.dk</a></p>
-  </div>
-  <div class="footer-right">
-    <div class="about">
-      <h3>Om os</h3>
-      <p>Vi leverer kvalitetsarbejde til tiden.</p>
+  <div class="footer-content container">
+    <div class="footer-left">
+      <h2>Kontakt os</h2>
+      <p>Telefon: <a href="tel:+4528328515">+45 28 32 85 15</a></p>
+      <p>Email: <a href="mailto:kasperln@msn.com">kasperln@msn.com</a></p>
     </div>
-    <div class="details">
-      <p>CVR: 12345678</p>
-      <p>Adresse: Hovedgade 1, 1000 København</p>
-    </div>
-    <div class="legal">
-      <img src="img/logo.png" alt="Logo" class="footer-logo">
-      <p>&copy; 2025 Håndværkerfirmaet</p>
+    <div class="footer-right">
+      <div class="about">
+        <h3>Om os</h3>
+        <p>Professionelt håndværk til tiden.</p>
+      </div>
+      <div class="details">
+        <p>CVR: 45565262</p>
+        <p>Adresse: Dragehøjvej 55.1, Næstved, Denmark</p>
+      </div>
+      <div class="legal">
+        <img src="img/logo.png" alt="Logo" class="footer-logo">
+        <p>&copy; 2025 Kasper Lund Nielsen</p>
+      </div>
     </div>
   </div>
 </footer>
+
+<script>
+  document.querySelector('.nav-toggle')
+    .addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
+    });
+</script>
 </body>
 </html>
