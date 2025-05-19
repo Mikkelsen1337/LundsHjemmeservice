@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hvem er vi</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="index-page">
@@ -13,12 +16,12 @@
   <nav class="navbar container">
     <div class="logo">
       <span class="brand">Lund's Hjemmeservice</span>
+      <span class="tagline">Total entreprise</span>
+      <span class="subtagline">Nybyg og renovering</span>
     </div>
-
     <button class="nav-toggle" aria-label="Åbn navigation">
       <span></span><span></span><span></span>
     </button>
-
     <ul class="nav-links">
       <li><a href="index.html" class="nav-btn">Hvem er vi</a></li>
       <li><a href="prisliste.html" class="nav-btn">Prisliste</a></li>
@@ -30,19 +33,97 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero container">
-    <img src="img/logo.png" alt="Logo" class="hero-logo">
-    <h1>Haveservice og Handymand til hele Sjælland</h1>
-    <p>Tømrermester Kasper Lund Nielsen | CVR: 45565262</p>
+    <h1>Haveservice og Handymand</h1>
+    <h1>til hele Sjælland</h1>
+    <p class="hero-subtitle">– Kvalitet fremfor alt</p>
+    <p>CVR: 45565262</p>
   </section>
 
-  <section class="action-boxes">
-    <a href="eksempler.html" class="box"><h3>Tømrerarbejde</h3></a>
-    <a href="eksempler.html" class="box"><h3>Malearbejde inde og ude</h3></a>
-    <a href="eksempler.html" class="box"><h3>Belægningsarbejde</h3></a>
-    <a href="eksempler.html" class="box"><h3>Haveservice</h3></a>
-    <a href="eksempler.html" class="box"><h3>Bortkørsel af affald</h3></a>
-    <a href="eksempler.html" class="box"><h3>Div. opgaver for Handymand</h3></a>
+  <!-- TEAM SEKTION -->
+  <section class="team container">
+    <h2 class="team-title">Respekt – Loyalitet – Service</h2>
+
+    <!-- Kasper i egen mini-boks -->
+    <div class="kasper-list">
+      <dl>
+        <div class="team-row">
+          <dt><span>Tømrermester</span></dt>
+          <dd>Kasper Lund</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Resten af teamet samlet -->
+    <div class="team-container">
+      <dl class="team-list">
+
+        <div class="team-row">
+          <dt><span>WebDesigner</span></dt>
+          <dd>Marcus Mikkelsen</dd>
+        </div>
+
+        <div class="team-row">
+          <dt>
+            <span>Hardware</span>
+            <span>Tømrer</span>
+            <span>Maler</span>
+            <span>Handymand</span>
+          </dt>
+          <dd>Kasper</dd>
+        </div>
+
+        <div class="team-row">
+          <dt><span>Elektriker</span></dt>
+          <dd>Martin</dd>
+        </div>
+
+        <div class="team-row">
+          <dt>
+            <span>Tømrer</span>
+            <span>Murer</span>
+            <span>Maler</span>
+            <span>Handymand</span>
+          </dt>
+          <dd>Yuri</dd>
+        </div>
+
+        <div class="team-row">
+          <dt>
+            <span>Tømrer</span>
+            <span>Murer</span>
+            <span>Maler</span>
+            <span>Handymand</span>
+          </dt>
+          <dd>Petro</dd>
+        </div>
+
+        <div class="team-row">
+          <dt>
+            <span>Rengøring</span><br>
+            <span>Handywoman</span>
+          </dt>
+          <dd>Anja</dd>
+        </div>
+
+        <div class="team-row">
+          <dt><span>Advokat</span></dt>
+          <dd>KHAVEE</dd>
+        </div>
+
+        <div class="team-row">
+          <dt><span>Bogholder</span></dt>
+          <dd>Ina</dd>
+        </div>
+
+        <div class="team-row">
+          <dt><span>Revisor</span></dt>
+          <dd>&nbsp;</dd>
+        </div>
+
+      </dl>
+    </div>
   </section>
 </main>
 
@@ -72,9 +153,7 @@
 
 <script>
   document.querySelector('.nav-toggle')
-    .addEventListener('click', () => {
-      document.body.classList.toggle('nav-open');
-    });
+    .addEventListener('click', () => document.body.classList.toggle('nav-open'));
 </script>
 </body>
 </html>

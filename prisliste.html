@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prisliste</title>
+  <!-- 1) Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- 2) Dit stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,14 +19,14 @@
   <nav class="navbar container">
     <div class="logo">
       <span class="brand">Lund's Hjemmeservice</span>
+      <span class="tagline">Total entreprise</span>
+      <span class="subtagline">Nybyg og renovering</span>
     </div>
-
     <button class="nav-toggle" aria-label="Åbn navigation">
       <span></span><span></span><span></span>
     </button>
-
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-btn">Hvem er vi</a></li>
+      <li><a href="index.html"   class="nav-btn">Hvem er vi</a></li>
       <li><a href="prisliste.html" class="nav-btn">Prisliste</a></li>
       <li><a href="eksempler.html" class="nav-btn">Pris eksempler</a></li>
       <li><a href="kontakt.html" class="nav-btn">Kontakt</a></li>
@@ -29,91 +35,180 @@
   </nav>
 </header>
 
-<main>
-  <section class="price-hero container">
+<main class="container">
+  <!-- HERO -->
+  <section class="price-hero">
     <h1>Prisliste</h1>
-    <p>Alle priser er inkl. moms.</p>
+    <p>Alle priser er inkl. moms. I DKR.</p>
   </section>
 
+  <!-- PRISLISTE -->
   <section class="price-list">
+    <!-- Tømrerarbejde -->
     <div class="price-item">
       <h3>Tømrerarbejde</h3>
-      <p>Isætning / udskiftning af døre og vinduer</p>
-      <p>Fugearbejde</p>
-      <p>Gulv arbejde</p>
-      <p>Gips arbejde</p>
-      <p>Kr. 550,- pr. time</p>
-      <p>Gerichter - fodpaneler - Listearbejde</p>
-      <p>Kr. 600,- pr. time</p>
-      <h3>Køkken opsætning / nedtagning</h3>
-      <p>Kr. 650,- pr. time</p>
-      <h3> Gavl - Sternbrædder - Vindskeder - Udhængsbrædder</h3>
-      <p>Kr. 750,- pr. time</p>
-      <h3>Tagarbejde</h3>
-      <p>Kr. 850,- pr. time</p>
-      <h3>Bindingsværk</h3>
-      <p>Kr. 950,- pr. time</p>
-
-      <p>(Alle priser er inkl. Stige / stillads)</p>
+      <dl class="services">
+        <div class="service-row"><dt>Gerichter, fodpaneler, lister</dt><dd>600 kr./t</dd></div>
+        <div class="service-row"><dt>Isætning/udskiftning af døre inde</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Gulvarbejde</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Gipsarbejde</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Køkkenopsætning/nedtagning</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>New-Yorker væg</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Isætning/udskiftning af døre ude</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Fugearbejde</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Gavl, sternbrædder, udhængsbrædder</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Terrassedøre-parti</dt><dd>900 kr./t</dd></div>
+        <div class="service-row"><dt>Tagarbejde</dt><dd>850 kr./t</dd></div>
+        <div class="service-row"><dt>Bindingsværk</dt><dd>950 kr./t</dd></div>
+      </dl>
+      <p class="note">(Alle priser inkl. stige/stillads)</p>
     </div>
+
+    <!-- Malearbejde -->
     <div class="price-item">
-      <h3>Malearbejde inde</h3>
-      <h3>Vægge</h3>
-      <p>Kr. 550,- pr. time</p>
-      <h3>Døre - gericther - paneler</h3>
-      <p>Kr. 650,- pr. time</p>
-      <h3>Malearbejde ude</h3>
-      <p>Kr. 500,- pr. time</p>
-      <h3>Vinduer - Møbler</h3>
-      <p>Kr. 700,- pr. time</p>
-
-      <h3>Malearbejde ude</h3>
-      <h3>Beklædning ude</h3>
-      <p>Kr. 500,- pr. time</p>
-      <h3> Gavl - Sternbrædder - Vindskeder - Udhængsbrædder</h3>
-      <p>Kr. 750,- pr. time</p>
-      <h3>Vinduer - Døre</h3>
-      <p>Kr. 700,- pr. time</p>
-
-      <p>Alt udendørs malearbejde er penselarbejde</p>
+      <h3>Malearbejde</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Udendørs malerarbejde</dt><dd>500 kr./t</dd></div>
+        <div class="service-row"><dt>Beklædning ude</dt><dd>500 kr./t</dd></div>
+        <div class="service-row"><dt>Indendørs – vægge</dt><dd>550 kr./t</dd></div>
+        <div class="service-row"><dt>Indendørs – døre, paneler</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Vinduer og møbler</dt><dd>700 kr./t</dd></div>
+        <div class="service-row"><dt>Vinduer og døre</dt><dd>700 kr./t</dd></div>
+        <div class="service-row"><dt>Gavl-ægge, sternbrædder</dt><dd>750 kr./t</dd></div>
+      </dl>
+      <p class="note">Alt udendørs malearbejde er penselarbejde</p>
     </div>
+
+    <!-- Belægningsarbejde -->
     <div class="price-item">
       <h3>Belægningsarbejde</h3>
-      <h3>Betonfliser div.</h3>
-      <p>Kr. 600,- pr. m2.</p>
-      <h3>Brosten - chaussesten</h3>
-      <p> Kr. 750,- pr. m2</p>
-      <h3>Dannebrogs belægning </h3>
-      <p>(Fliser og chaussesten)</p>
-      <p>Kr. 1200, pr. m2</p>
-      <h3>Indkørsel / Fast underlag til brug for bil</h3>
-      <p>Kr. +100,- pr. m2</p>
-      <p>(Belægningspriser er inkl. Maskiner)</p>
+      <dl class="services">
+        <div class="service-row"><dt>Indkørsel/fast underlag</dt><dd>+100 kr./m²</dd></div>
+        <div class="service-row"><dt>Betonfliser</dt><dd>600 kr./m²</dd></div>
+        <div class="service-row"><dt>Brosten & chaussesten</dt><dd>750 kr./m²</dd></div>
+        <div class="service-row"><dt>Dannebrog-belægning</dt><dd>1200 kr./m²</dd></div>
+      </dl>
+      <p class="note">(Priser inkl. maskiner; gebyr for maskineleje)</p>
     </div>
+
+    <!-- Haveservice -->
     <div class="price-item">
       <h3>Haveservice</h3>
-      <p>Kr. 450,- pr. time</p>
+      <dl class="services">
+        <div class="service-row"><dt>Lugning af ukrudt</dt><dd>500 kr./t</dd></div>
+        <div class="service-row"><dt>Bekæmpelse med roundup</dt><dd>500 kr./t</dd></div>
+        <div class="service-row"><dt>Lugning af bede</dt><dd>550 kr./t</dd></div>
+        <div class="service-row"><dt>Hække klipning – standard</dt><dd>550 kr./t</dd></div>
+        <div class="service-row"><dt>Ukrudtsbrænder</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Lugning af belægning</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Hække klipning – beskæring</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Nedskæring m. motorsav</dt><dd>850 kr./t</dd></div>
+        <div class="service-row"><dt>Træfældning</dt><dd>Tilbud gives</dd></div>
+      </dl>
     </div>
+
+    <!-- Øvrige ydelser -->
     <div class="price-item">
       <h3>Bortkørsel af affald</h3>
-      <p>Kr. 500,- pr. 300kg</p>
+      <dl class="services">
+        <div class="service-row"><dt>Bortkørsel af affald</dt><dd>500 kr./300 kg</dd></div>
+      </dl>
     </div>
+
     <div class="price-item">
-      <h3>Div. opgaver for Handymand</h3>
-      <p>Kr. 450 til 650,- pr. time</p>
+      <h3>Handymand-opgaver</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Handymand-opgaver</dt><dd>450-650 kr./t</dd></div>
+      </dl>
     </div>
+
     <div class="price-item">
-      <h3>Skimmelbekæmpelse / sanering</h3>
-      <p>Kr. 750,- pr time</p>
+      <h3>Skimmelbekæmpelse & sanering</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Skimmelbekæmpelse & sanering</dt><dd>750 kr./t</dd></div>
+      </dl>
     </div>
+
     <div class="price-item">
       <h3>Nedrivning</h3>
-      <p>Kr. 750,- pr time</p>
+      <dl class="services">
+        <div class="service-row"><dt>Nedrivning</dt><dd>750 kr./t</dd></div>
+      </dl>
     </div>
+
     <div class="price-item">
       <h3>Rengøring</h3>
-      <p>Kr. 450,- pr time</p>
+      <dl class="services">
+        <div class="service-row">
+          <dt>Rengøring</dt>
+          <dd>450 kr./t</dd>
+        </div>
+      </dl>
     </div>
+
+    <!-- Murerarbejde -->
+    <div class="price-item">
+      <h3>Murerarbejde</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Mørtel puds</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Opmuring/renovering</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Isætning af sålbænk</dt><dd>850 kr./t</dd></div>
+      </dl>
+    </div>
+
+    <!-- Elektriker -->
+    <div class="price-item">
+      <h3>Elektriker</h3>
+      <dl class="services">
+        <div class="service-row">
+          <dt>Elektriker</dt>
+          <dd>900 kr./t</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- VVS -->
+    <div class="price-item">
+      <h3>VVS</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Fliser/klinker køkken</dt><dd>650 kr./t</dd></div>
+        <div class="service-row"><dt>Fliser/klinker baderum</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Bad/toilet opbygning</dt><dd>750 kr./t</dd></div>
+        <div class="service-row"><dt>Diverse VVS</dt><dd>850 kr./t</dd></div>
+      </dl>
+    </div>
+
+    <!-- Total entrepriser -->
+    <div class="price-item">
+      <h3>Total entrepriser</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Tilbud gives</dt><dd>Arbejde på timepris</dd></div>
+      </dl>
+    </div>
+
+    <!-- Stillads -->
+    <div class="price-item">
+      <h3>Stillads</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Rulle-stillads</dt><dd>850 kr/t +1.000 kr gebyr</dd></div>
+        <div class="service-row"><dt>Mini jumbo stillads</dt><dd>500 kr gebyr</dd></div>
+        <div class="service-row"><dt>Særligt stillads</dt><dd>Tilbud fra partner</dd></div>
+      </dl>
+    </div>
+
+    <!-- Kørsels tillæg -->
+    <div class="price-item">
+      <h3>Kørsels tillæg</h3>
+      <dl class="services">
+        <div class="service-row"><dt>Næstved</dt><dd>250 kr/dag/mand</dd></div>
+        <div class="service-row"><dt>Køge</dt><dd>350 kr/dag/mand</dd></div>
+        <div class="service-row"><dt>Solrød</dt><dd>450 kr/dag/mand</dd></div>
+        <div class="service-row"><dt>København C</dt><dd>550 kr/dag/mand</dd></div>
+        <div class="service-row"><dt>Kbh. Nord</dt><dd>650 kr/dag/mand</dd></div>
+        <div class="service-row"><dt>NordSjælland</dt><dd>750 kr/dag/mand</dd></div>
+      </dl>
+    </div>
+
   </section>
 </main>
 
@@ -131,7 +226,7 @@
       </div>
       <div class="details">
         <p>CVR: 45565262</p>
-        <p>Adresse: Dragehøjvej 55.1, Næstved, Denmark</p>
+        <p>Adresse: Dragehøjvej 55.1, Næstved, DK</p>
       </div>
       <div class="legal">
         <img src="img/logo.png" alt="Logo" class="footer-logo">
