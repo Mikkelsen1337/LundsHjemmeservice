@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookiepolitik – Lund’s Hjemmeservice</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Genbrug header/nav fra index.html -->
+<header>
+  <nav class="navbar container">
+    <!-- samme logo og nav som i index.html -->
+    <div class="logo">
+      <span class="brand">Lund's Hjemmeservice</span>
+    </div>
+    <button class="nav-toggle" aria-label="Åbn navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html#hvem-er-jeg">Hvem er jeg</a></li>
+      <li><a href="index.html#prisliste">Prisliste</a></li>
+      <li><a href="index.html#pris-eksempler">Pris eksempler</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="cookie-info container">
+  <h1>Cookiepolitik</h1>
+  <p>Denne hjemmeside anvender i øjeblikket ingen cookies. Hvis vi tager cookies i brug fremover, vil vi opdatere informationen her på siden.</p>
+</main>
+
+<!-- Genbrug footer fra index.html -->
+<footer>
+  <div class="footer-content container">
+    <!-- samme indhold som i index.html -->
+  </div>
+</footer>
+
+<!-- Cookie-banner + script som i index.html -->
+<div class="cookie-banner">
+  <p>Vi benytter ikke cookies på nuværende tidspunkt, læs mere her.</p>
+  <button id="cookie-decline" class="btn-secondary">Afvis</button>
+  <button id="cookie-accept" class="btn-secondary">Accepter</button>
+  <a href="cookies.html" class="btn-secondary">Læs mere</a>
+</div>
+<script>
+  if (localStorage.getItem('cookieConsent')) {
+    document.querySelector('.cookie-banner').style.display = 'none';
+  }
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('cookieConsent','accepted');
+    document.querySelector('.cookie-banner').remove();
+  });
+  document.getElementById('cookie-decline').addEventListener('click', () => {
+    localStorage.setItem('cookieConsent','declined');
+    document.querySelector('.cookie-banner').remove();
+  });
+</script>
+</body>
+</html>

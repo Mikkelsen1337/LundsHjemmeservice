@@ -2,137 +2,325 @@
 <html lang="da">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hvem er vi</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
-    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0">
+  <title>Lund’s Hjemmeservice</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="index-page">
+<!-- INTRO: kun logo + titel -->
+<section id="forside" class="intro-hero" aria-label="Lunds hjemmeservice">
+  <div class="intro-wrap">
+    <img src="img/logo.png" alt="Lunds Hjemmeservice logo" class="intro-logo">
+    <h1 class="intro-title">
+      <span class="intro-line1">Lunds hjemmeservice</span>
+      <span class="intro-line2">Respekt · Service · Loyalitet</span>
+    </h1>
+  </div>
+</section>
+
+<!-- Baggrund (styres af GraphicContent.js) -->
 <div class="bg-image"></div>
 
 <header>
   <nav class="navbar container">
-    <div class="logo">
-      <span class="brand">Lund's Hjemmeservice</span>
-      <span class="tagline">Total entreprise</span>
-      <span class="subtagline">Nybyg og renovering</span>
+    <!-- Logo + tekst -->
+    <div class="brand-group">
+      <a href="#forside" class="logo-link">
+        <img src="img/logo.png" alt="Lund's Hjemmeservice" class="logo-img">
+      </a>
+      <div class="logo-text">
+        <span class="brand">Lund's Hjemmeservice</span>
+        <span class="tagline">Total entreprise</span>
+        <span class="subtagline">Nybyg og renovering</span>
+      </div>
     </div>
+
+    <!-- Burger-menu (kun mobil) -->
     <button class="nav-toggle" aria-label="Åbn navigation">
       <span></span><span></span><span></span>
     </button>
+
+    <!-- Navigation links -->
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-btn">Hvem er vi</a></li>
-      <li><a href="prisliste.html" class="nav-btn">Prisliste</a></li>
-      <li><a href="eksempler.html" class="nav-btn">Pris eksempler</a></li>
-      <li><a href="kontakt.html" class="nav-btn">Kontakt</a></li>
-      <li><a href="afslutning.html" class="nav-btn">Afslutning</a></li>
+      <li><a href="#hvem-er-jeg">Hvem er jeg</a></li>
+      <li><a href="#prisliste">Prisliste</a></li>
+      <li><a href="#pris-eksempler">Pris eksempler</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
 </header>
+<div class="nav-overlay" hidden></div>
+
+
 
 <main>
-  <!-- HERO -->
-  <section class="hero container">
-    <h1>Haveservice og Handymand</h1>
-    <h1>til hele Sjælland</h1>
-    <p class="hero-subtitle">– Kvalitet fremfor alt</p>
-    <p>CVR: 45565262</p>
-  </section>
-
-  <!-- TEAM SEKTION -->
-  <section class="team container">
-    <h2 class="team-title">Respekt – Loyalitet – Service</h2>
-
-    <!-- Kasper i egen mini-boks -->
-    <div class="kasper-list">
-      <dl>
-        <div class="team-row">
-          <dt><span>Tømrermester</span></dt>
-          <dd>Kasper Lund</dd>
-        </div>
-      </dl>
-    </div>
-
-    <!-- Resten af teamet samlet -->
-    <div class="team-container">
-      <dl class="team-list">
-
-        <div class="team-row">
-          <dt><span>WebDesigner</span></dt>
-          <dd>Marcus Mikkelsen</dd>
-        </div>
-
-        <div class="team-row">
-          <dt>
-            <span>Hardware</span>
-            <span>Tømrer</span>
-            <span>Maler</span>
-            <span>Handymand</span>
-          </dt>
-          <dd>Kasper</dd>
-        </div>
-
-        <div class="team-row">
-          <dt><span>Elektriker</span></dt>
-          <dd>Martin</dd>
-        </div>
-
-        <div class="team-row">
-          <dt>
-            <span>Tømrer</span>
-            <span>Murer</span>
-            <span>Maler</span>
-            <span>Handymand</span>
-          </dt>
-          <dd>Yuri</dd>
-        </div>
-
-        <div class="team-row">
-          <dt>
-            <span>Tømrer</span>
-            <span>Murer</span>
-            <span>Maler</span>
-            <span>Handymand</span>
-          </dt>
-          <dd>Petro</dd>
-        </div>
-
-        <div class="team-row">
-          <dt>
-            <span>Rengøring</span><br>
-            <span>Handywoman</span>
-          </dt>
-          <dd>Anja</dd>
-        </div>
-
-        <div class="team-row">
-          <dt><span>Advokat</span></dt>
-          <dd>KHAVEE</dd>
-        </div>
-
-        <div class="team-row">
-          <dt><span>Bogholder</span></dt>
-          <dd>Ina</dd>
-        </div>
-
-        <div class="team-row">
-          <dt><span>Revisor</span></dt>
-          <dd>&nbsp;</dd>
-        </div>
-
-      </dl>
+  <!-- HVEM ER JEG -->
+  <section id="hvem-er-jeg" class="whoami-section">
+    <div class="container whoami-bubble">
+      <div class="bubble-image">
+        <img src="img/kasper.png" alt="Kasper Lund">
+      </div>
+      <div class="bubble-text">
+        <h2>Hvem er jeg?</h2>
+        <p>En mand, mange kasketter.</p>
+        <p>Jeg hedder Kasper og jeg er 44 år.</p>
+        <p>Min vision er at være Danmarks bedste håndværker, og levere totalentreprise til den danske befolkning hvor kvalitet er i højsædet, samt levere den bedste service i forhold til mine kunder.</p>
+        <p>Jeg har murere, tømrere samt elektrikere som samarbejdspartnere ved totalentrepriser.</p>
+        <p>Hele livet har jeg været ferm på fingrene, været dygtig til at bruge hænderne, og så har jeg desuden forstand på lidt af hvert.</p>
+        <p>Jeg er opvokset på en bondegård hvor man laver alting selv, og min far og farfar har lært mig at arbejde fra barnsben.</p>
+        <p>Jeg er uddannet tømrer med svendebrev hos PPH-BYG aps, hvor jeg har stået i mesterlære hos Tømrermester Peter Pommergaard Hansen.</p>
+        <p>Jeg er en dygtig maler. Min far er uddannet maler og har lært mig at male, så jeg har i og for sig været i mesterlære som maler. Dog har jeg ikke et svendebrev.</p>
+        <p>Jeg har lavet flisebelægninger siden jeg var 14 år gammel.</p>
+        <p>Jeg har arbejdet i entreprenørbranchen i 6 år, hvor jeg har lagt strøm, vand og fiberkabler, lavet fjernvarme og kloak.</p>
+        <p>Jeg har arbejdet 2 år som ansat, samt 7 år selvstændigt som haveservicemand i sommersæsonen.</p>
+        <p>Jeg har bygget og repareret knallerter som ung, så jeg har lært en del om motor, bolte og gevind osv.</p>
+        <p>Jeg har været kamp soldat i Det Danske Forsvar i Livregimentet – (Kronprinsens Livgarde) Gardehussar Regimentet 2.2. Slagelse, og udsendt til Kosovo som fredsbevarende styrke for det danske forsvar.</p>
+        <p>Jeg er udlært salgsassistent med speciale i byggemarked i RÅD OG DÅD – Grønvolds tømmerhandel.</p>
+      </div>
     </div>
   </section>
+
+  <!-- PRISLISTE -->
+  <section id="prisliste">
+    <!-- PRISLISTE HERO -->
+    <div class="price-hero container">
+      <h1>Prisliste</h1>
+      <p>Alle priser er inkl. moms. I DKK.</p>
+    </div>
+
+    <!-- PRISLISTE GRID -->
+    <div class="price-list container">
+      <!-- Tømrerarbejde -->
+      <div class="price-item">
+        <h3>Tømrerarbejde</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Gerichter, fodpaneler, lister</dt><dd>600 kr./t</dd></div>
+          <div class="service-row"><dt>Isætning/udskiftning af døre inde</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Gulvarbejde</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Gipsarbejde</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Køkkenopsætning/nedtagning</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>New-Yorker væg</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Isætning/udskiftning af døre ude</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Fugearbejde</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Gavl, sternbrædder, udhængsbrædder</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Terrassedøre-parti</dt><dd>900 kr./t</dd></div>
+          <div class="service-row"><dt>Tagarbejde</dt><dd>850 kr./t</dd></div>
+          <div class="service-row"><dt>Bindingsværk</dt><dd>950 kr./t</dd></div>
+        </dl>
+        <p class="note">(Alle priser inkl. stige/stillads)</p>
+      </div>
+
+      <!-- Malearbejde -->
+      <div class="price-item">
+        <h3>Malearbejde</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Udendørs malerarbejde</dt><dd>550 kr./t</dd></div>
+          <div class="service-row"><dt>Indendørs – vægge</dt><dd>600 kr./t</dd></div>
+          <div class="service-row"><dt>Indendørs – døre, paneler</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Møbler</dt><dd>700 kr./t</dd></div>
+          <div class="service-row"><dt>Vinduer og døre</dt><dd>700 kr./t</dd></div>
+          <div class="service-row"><dt>Gavl-ægge, sternbrædder</dt><dd>750 kr./t</dd></div>
+        </dl>
+        <p class="note">Alt udendørs malearbejde er penselarbejde</p>
+      </div>
+
+      <!-- Belægningsarbejde -->
+      <div class="price-item">
+        <h3>Belægningsarbejde</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Indkørsel/fast underlag</dt><dd>+100 kr./m²</dd></div>
+          <div class="service-row"><dt>Betonfliser</dt><dd>600 kr./m²</dd></div>
+          <div class="service-row"><dt>Brosten &amp; chaussesten</dt><dd>750 kr./m²</dd></div>
+          <div class="service-row"><dt>Dannebrog-belægning</dt><dd>1200 kr./m²</dd></div>
+        </dl>
+        <p class="note">(Priser inkl. maskiner; gebyr for maskineleje)</p>
+      </div>
+
+      <!-- Haveservice -->
+      <div class="price-item">
+        <h3>Haveservice</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Lugning af ukrudt</dt><dd>550 kr./t</dd></div>
+          <div class="service-row"><dt>Lugning af bede</dt><dd>550 kr./t</dd></div>
+          <div class="service-row"><dt>Hække klipning – standard</dt><dd>550 kr./t</dd></div>
+          <div class="service-row"><dt>Lugning af belægning</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Hække klipning – beskæring</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Nedskæring m. motorsav</dt><dd>850 kr./t</dd></div>
+          <div class="service-row"><dt>Træfældning</dt><dd>Tilbud gives</dd></div>
+        </dl>
+      </div>
+
+      <!-- Bortkørsel af affald -->
+      <div class="price-item">
+        <h3>Bortkørsel af affald</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Bortkørsel af affald</dt><dd>500 kr./300 kg</dd></div>
+        </dl>
+      </div>
+
+      <!-- Handymand-opgaver -->
+      <div class="price-item">
+        <h3>Handymand-opgaver</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Handymand-opgaver</dt><dd>450-650 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- Skimmelbekæmpelse & sanering -->
+      <div class="price-item">
+        <h3>Skimmelbekæmpelse & sanering</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Skimmelbekæmpelse & sanering</dt><dd>750 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- Nedrivning -->
+      <div class="price-item">
+        <h3>Nedrivning</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Nedrivning</dt><dd>750 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- Rengøring -->
+      <div class="price-item">
+        <h3>Rengøring</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Rengøring</dt><dd>450 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- Murerarbejde -->
+      <div class="price-item">
+        <h3>Murerarbejde</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Mørtel puds</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Opmuring/Renovering</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Isætning af sålbænk</dt><dd>850 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- Elektriker -->
+      <div class="price-item">
+        <h3>Elektriker</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Elektriker</dt><dd>900 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- VVS -->
+      <div class="price-item">
+        <h3>VVS</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Fliser/klinker køkken</dt><dd>650 kr./t</dd></div>
+          <div class="service-row"><dt>Fliser/klinker baderum</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Bad/toilet opbygning</dt><dd>750 kr./t</dd></div>
+          <div class="service-row"><dt>Diverse VVS</dt><dd>850 kr./t</dd></div>
+        </dl>
+      </div>
+
+      <!-- Total entrepriser -->
+      <div class="price-item">
+        <h3>Total entrepriser</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Tilbud gives</dt><dd>Arbejde på timepris</dd></div>
+        </dl>
+      </div>
+
+      <!-- Stillads -->
+      <div class="price-item">
+        <h3>Stillads</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Rulle-stillads</dt><dd>850 kr./t + 1.000 kr. gebyr</dd></div>
+          <div class="service-row"><dt>Mini jumbo stillads</dt><dd>500 kr. gebyr</dd></div>
+          <div class="service-row"><dt>Særligt stillads</dt><dd>Tilbud fra partner</dd></div>
+        </dl>
+      </div>
+
+      <!-- Kørsels tillæg -->
+      <div class="price-item">
+        <h3>Kørsels tillæg</h3>
+        <dl class="services">
+          <div class="service-row"><dt>Næstved</dt><dd>250 kr./dag/mand</dd></div>
+          <div class="service-row"><dt>Køge</dt><dd>350 kr./dag/mand</dd></div>
+          <div class="service-row"><dt>Solrød</dt><dd>450 kr./dag/mand</dd></div>
+          <div class="service-row"><dt>København C</dt><dd>550 kr./dag/mand</dd></div>
+          <div class="service-row"><dt>Kbh. Nord</dt><dd>650 kr./dag/mand</dd></div>
+          <div class="service-row"><dt>NordSjælland</dt><dd>750 kr./dag/mand</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO & PRIS EKSEMPLER -->
+  <section id="pris-eksempler" class="portfolio container">
+    <h1>Pris eksempler</h1>
+    <div class="slider-container">
+      <button class="slider-arrow prev" aria-label="Forrige projekt">‹</button>
+      <div class="slider-track">
+        <div class="card">
+          <img src="img/eksempel1.jpg" alt="Projekt 1">
+          <h3>Projekt 1</h3>
+          <p class="description">Havearbejde</p>
+          <p class="price">Pris: 5.000 kr.</p>
+        </div>
+        <div class="card">
+          <img src="img/eksempel2.jpg" alt="Projekt 2">
+          <h3>Projekt 2</h3>
+          <p class="description">Renovering</p>
+          <p class="price">Pris: 12.000 kr.</p>
+        </div>
+        <div class="card">
+          <img src="img/eksempel3.jpg" alt="Projekt 3">
+          <h3>Projekt 3</h3>
+          <p class="description">Tømrerarbejde</p>
+          <p class="price">Pris: 8.000 kr.</p>
+        </div>
+
+        <!-- tilføj flere .card efter behov -->
+      </div>
+      <button class="slider-arrow next" aria-label="Næste projekt">›</button>
+    </div>
+  </section>
+
+
+
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="contact-section">
+    <div class="container">
+      <h1>Kontakt os</h1>
+      <div class="contact-content">
+        <!-- Venstre kolonne: info -->
+        <div class="contact-info">
+          <p><strong>Telefon:</strong> <a href="tel:+4528328515">+45 28 32 85 15</a></p>
+          <p><strong>Email:</strong> <a href="mailto:lundshjemmeservice@gmail.com">lundshjemmeservice@gmail.com</a></p>
+          <p><strong>Adresse:</strong> Dragehøjvej 55.1, Næstved, DK</p>
+        </div>
+        <!-- Højre kolonne: formular -->
+        <form action="#" method="post" class="contact-form">
+          <label for="name">Navn</label>
+          <input type="text" id="name" name="name" required placeholder="Dit navn">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Din email">
+          <label for="message">Besked</label>
+          <textarea id="message" name="message" rows="5" placeholder="Skriv din besked…"></textarea>
+          <button type="submit">Send besked</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-content container">
     <div class="footer-left">
       <h2>Kontakt os</h2>
       <p>Telefon: <a href="tel:+4528328515">+45 28 32 85 15</a></p>
-      <p>Email: <a href="mailto:kasperln@msn.com">kasperln@msn.com</a></p>
+      <p>Email: <a href="mailto:lundshjemmeservice@gmail.com">lundshjemmeservice@gmail.com</a></p>
     </div>
     <div class="footer-right">
       <div class="about">
@@ -141,19 +329,89 @@
       </div>
       <div class="details">
         <p>CVR: 45565262</p>
-        <p>Adresse: Dragehøjvej 55.1, Næstved, Denmark</p>
+        <p>Dragehøjvej 55.1, Næstved, Denmark</p>
       </div>
       <div class="legal">
-        <img src="img/logo.png" alt="Logo" class="footer-logo">
+        <img src="img/kasper.png" alt="Logo" class="footer-logo">
         <p>&copy; 2025 Kasper Lund Nielsen</p>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- COOKIE-BANNER -->
+<div class="cookie-banner">
+  <p>Denne hjemmeside bruger på nuværende tidspunkt ikke cookies, læs mere om cookies på hjemmesiden her.</p>
+  <button id="cookie-decline" class="btn-secondary">Afvis</button>
+  <button id="cookie-accept" class="btn-secondary">Accepter</button>
+  <a href="cookies.html" class="btn-secondary">Læs mere</a>
+</div>
+
+<!-- SCRIPTS -->
 <script>
-  document.querySelector('.nav-toggle')
-    .addEventListener('click', () => document.body.classList.toggle('nav-open'));
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks  = document.querySelector('.nav-links');
+    const overlay   = document.querySelector('.nav-overlay');
+
+    const openNav = () => {
+      document.body.classList.add('nav-open');
+      document.documentElement.classList.add('no-scroll');
+      navToggle?.setAttribute('aria-expanded','true');
+      overlay?.removeAttribute('hidden');
+    };
+    const closeNav = () => {
+      document.body.classList.remove('nav-open');
+      document.documentElement.classList.remove('no-scroll');
+      navToggle?.setAttribute('aria-expanded','false');
+      overlay?.setAttribute('hidden','');
+    };
+
+    navToggle?.addEventListener('click', () =>
+      document.body.classList.contains('nav-open') ? closeNav() : openNav()
+    );
+
+    // stop klik inde i skuffen fra at lukke via overlay
+    navLinks?.addEventListener('click', e => e.stopPropagation());
+
+    // luk når man trykker på et link (god UX)
+    navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+    overlay?.addEventListener('click', closeNav);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+  });
 </script>
+<script src="js/PortfolioSlider.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner    = document.querySelector('.cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept');   // <-- matcher dine knapper
+    const declineBtn= document.getElementById('cookie-decline');  // <--
+
+    // Migrér gammel nøgle hvis du har brugt "cookieConsent" før
+    const old = localStorage.getItem('cookieConsent');
+    if (old !== null && localStorage.getItem('cookiesAccepted') === null) {
+      localStorage.setItem('cookiesAccepted', old === 'accepted' ? 'true' : 'false');
+      localStorage.removeItem('cookieConsent');
+    }
+
+    // Skjul hvis valgt før
+    if (localStorage.getItem('cookiesAccepted') !== null) {
+      banner?.remove();
+      return;
+    }
+
+    acceptBtn?.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner?.remove();
+    });
+
+    declineBtn?.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'false');
+      banner?.remove();
+    });
+  });
+</script>
+
 </body>
 </html>
