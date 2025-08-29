@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0">
-  <title>Lund’s Hjemmeservice</title>
+  <title>Lund’s HjemmeService</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body class="index-page">
 <!-- INTRO: kun logo + titel -->
@@ -12,7 +14,7 @@
   <div class="intro-wrap">
     <img src="img/logo.png" alt="Lunds Hjemmeservice logo" class="intro-logo">
     <h1 class="intro-title">
-      <span class="intro-line1">Lunds hjemmeservice</span>
+      <span class="intro-line1">Lund's HjemmeService</span>
       <span class="intro-line2">Respekt · Service · Loyalitet</span>
     </h1>
   </div>
@@ -29,7 +31,7 @@
         <img src="img/logo.png" alt="Lund's Hjemmeservice" class="logo-img">
       </a>
       <div class="logo-text">
-        <span class="brand">Lund's Hjemmeservice</span>
+        <span class="brand">Lund's HjemmeService</span>
         <span class="tagline">Total entreprise</span>
         <span class="subtagline">Nybyg og renovering</span>
       </div>
@@ -289,27 +291,34 @@
   <!-- KONTAKT -->
   <section id="kontakt" class="contact-section">
     <div class="container">
-      <h1>Kontakt os</h1>
+      <h1>Vi hører gerne fra dig</h1>
+      <p class="contact-intro">Har du spørgsmål eller brug for hjælp? Ring, skriv eller brug formularen herunder.</p>
+
       <div class="contact-content">
         <!-- Venstre kolonne: info -->
         <div class="contact-info">
-          <p><strong>Telefon:</strong> <a href="tel:+4528328515">+45 28 32 85 15</a></p>
-          <p><strong>Email:</strong> <a href="mailto:lundshjemmeservice@gmail.com">lundshjemmeservice@gmail.com</a></p>
-          <p><strong>Adresse:</strong> Dragehøjvej 55.1, Næstved, DK</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+4528328515">+45 28 32 85 15</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:lundshjemmeservice@gmail.com">lundshjemmeservice@gmail.com</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Dragehøjvej 55.1, Næstved, DK</p>
         </div>
+
         <!-- Højre kolonne: formular -->
         <form action="#" method="post" class="contact-form">
           <label for="name">Navn</label>
           <input type="text" id="name" name="name" required placeholder="Dit navn">
+
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required placeholder="Din email">
+
           <label for="message">Besked</label>
           <textarea id="message" name="message" rows="5" placeholder="Skriv din besked…"></textarea>
-          <button type="submit">Send besked</button>
+
+          <button type="submit"><i class="fas fa-paper-plane"></i> Send besked</button>
         </form>
       </div>
     </div>
   </section>
+
 
 
 </main>

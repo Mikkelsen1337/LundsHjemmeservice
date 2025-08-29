@@ -92,16 +92,23 @@ header{
 /* ========== 5) Intro-hero ========== */
 .intro-hero{
   min-height:100dvh; display:grid; place-items:center;
-  position:relative; padding:6rem 1rem 2rem;
+  position:relative; padding:10rem 4rem 6rem;
 }
 .intro-wrap{
-  text-align:center; background:rgba(255,255,255,0.88);
-  border-radius:0.75rem; padding:2rem 1.5rem;
+  text-align:center; background: rgba(35, 18, 195, 0.67);
+  border-radius:1rem; padding:2rem 2rem;
 }
-.intro-logo{ width:min(260px, 60vw); height:auto; display:block; margin:0 auto 1rem; }
-.intro-title{ margin:0; font-family:"Times New Roman", Times, serif; line-height:1.2; color:#000; }
-.intro-title .intro-line1{ display:block; font-size:clamp(1.6rem, 3.5vw, 2.4rem); font-weight:700; }
-.intro-title .intro-line2{ display:block; font-size:clamp(1rem, 2.5vw, 1.4rem); font-weight:400; margin-top:.35rem; }
+.intro-logo{   width: min(640px, 240vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+
+  border: 4px solid #fff;   /* hvid outline */
+  border-radius: 50%;       /* sikrer at kanten følger cirklen */
+  box-shadow: 0 0 12px rgba(0,0,0,0.2); /* lille skygge for at fremhæve logoet */}
+.intro-title{ margin:0; font-family:"Bookman Old Style",serif; line-height:1.2; color: #ffffff; }
+.intro-title .intro-line1{ display:block; font-size:clamp(2.4rem, 4vw, 3.0rem); font-weight:700; }
+.intro-title .intro-line2{ display:block; font-size:clamp(1.6rem, 3vw, 2.0rem); font-weight:400; margin-top:.35rem; }
 
 /* ========== 6) Sektioner generelt ========== */
 section{ padding:4rem 0; }
@@ -142,6 +149,14 @@ section{ padding:4rem 0; }
 }
 @media (min-width:768px){
   .price-list{ grid-template-columns:1fr 1fr; }
+}
+.price-hero h1{
+  font-family: "Bookman Old Style",serif;
+  color: white;
+}
+.price-hero p{
+  font-family: "Bookman Old Style",serif;
+  color: white;
 }
 .price-item{
   background:rgba(35,18,195,0.95); color:#fff;
@@ -247,20 +262,49 @@ section{ padding:4rem 0; }
 }
 
 /* ========== 10) Kontakt ========== */
-.contact-section{ padding:4rem 0; background:rgba(255,255,255,0.9); }
-.contact-content{ display:flex; flex-direction:column; gap:2rem; margin-top:2rem; }
-@media (min-width:768px){ .contact-content{ flex-direction:row; } .contact-info,.contact-form{ flex:1; } }
-.contact-info p{ font-size:1rem; margin-bottom:1rem; }
-.contact-form{ display:flex; flex-direction:column; gap:1rem; }
-.contact-form label{ font-weight:bold; margin-bottom:0.25rem; }
+.contact-section{
+  padding:4rem 0;
+  background:linear-gradient(135deg, rgba(240,240,240,0.95), rgba(255,255,255,0.95));
+  border-radius:1rem;
+}
+.contact-section h1{ font-size:2rem; text-align:center; }
+.contact-intro{
+  text-align:center; max-width:600px; margin:0.5rem auto 2rem auto;
+  color:#555; font-size:1.1rem;
+}
+.contact-content{
+  display:flex; flex-direction:column; gap:2rem; margin-top:2rem;
+}
+@media (min-width:768px){
+  .contact-content{ flex-direction:row; }
+  .contact-info,.contact-form{ flex:1; }
+}
+.contact-info p{
+  font-size:1.1rem; margin-bottom:1.2rem; display:flex; align-items:center; gap:0.5rem;
+}
+.contact-info i{ color:#444; }
+.contact-form{
+  display:flex; flex-direction:column; gap:1rem;
+  background:#fff; padding:2rem; border-radius:0.75rem;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.contact-form label{ font-weight:600; margin-bottom:0.25rem; }
 .contact-form input,.contact-form textarea{
-  padding:0.75rem; border:1px solid #ccc; border-radius:0.25rem; font-family:inherit; width:100%;
+  padding:0.85rem 1rem; border:1px solid #ddd; border-radius:0.5rem;
+  font-family:inherit; width:100%; transition:border-color 0.2s;
+}
+.contact-form input:focus,.contact-form textarea:focus{
+  border-color:#222; outline:none;
 }
 .contact-form button{
   align-self:flex-start; margin-top:0.5rem;
-  padding:0.75rem 1.5rem; background:#222; color:#fff; border:none; border-radius:0.25rem; cursor:pointer;
+  padding:0.9rem 1.6rem; background:#222; color:#fff;
+  border:none; border-radius:0.5rem; cursor:pointer;
+  font-weight:600; transition:background 0.2s;
 }
+.contact-form button i{ margin-right:0.5rem; }
 .contact-form button:hover{ background:#000; }
+
 
 /* ========== 11) Footer ========== */
 footer{ background:#f1f1f1; padding:2rem 0; }
